@@ -1,0 +1,13 @@
+<h1>Página 3</h1>
+<p>Los usuarios son:<%= @users %></p>
+<script>
+  $( document ).ready(function(){
+    count= 0
+    $( document ).click(function() {
+      count ++;
+      if (count>1) {
+        $.backstretch("<%= asset_path "wallpaper.jpg" %>");
+      }
+    });
+  })
+</script>

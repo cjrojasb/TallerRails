@@ -1,2 +1,17 @@
-<h1>Pags#pag2</h1>
-<p>Find me in app/views/pags/pag2.html.erb</p>
+<div class="container">
+<button id="button1" class="btn btn-info btn-md">Ver Imágen</button>
+  <h1>Página 2</h1>
+  <p>Los usuarios son:<%= @users %></p>
+  <p>Primera Imágen</p>
+  <%= image_tag "rails.png", class:"img-pag2" %>
+  <p>Segunda Imágen</p>
+  <%= image_tag "ruby.png", class:"img-pag2" %>
+</div>
+
+<script>
+  $( document ).ready(function(){
+    $("#button1").click(function(){
+      $.backstretch("<%= asset_path "wallpaper.jpg" %>");
+    })
+  })
+</script>
